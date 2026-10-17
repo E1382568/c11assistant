@@ -112,7 +112,10 @@ public class Action {
         if (json == null) return map;
 
         try {
-            for (String key : json.keySet()) {
+            // Android 自带 JSONObject 提供 keys()，使用迭代器兼容车机的 Android 9。
+            java.util.Iterator<String> parameterKeys = json.keys();
+            while (parameterKeys.hasNext()) {
+                String key = parameterKeys.next();
                 Object value = json.opt(key);
                 if (value != null) {
                     map.put(key, value);
