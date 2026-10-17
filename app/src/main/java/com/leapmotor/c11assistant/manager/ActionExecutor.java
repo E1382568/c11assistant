@@ -108,111 +108,111 @@ public class ActionExecutor {
                     return speechSpeak(app, firstNonEmpty(args.optString("text"), payload));
                 case "SET_GLOBAL_INT":
                 case "CAR_GLOBAL_SET":
-                    return new C11CarControlManager(app).putGlobalInt(args.optString("key", args.optString("globalKey", "")), args.optInt("value", 0));
+                    return C11CarControlManager.getInstance(app).putGlobalInt(args.optString("key", args.optString("globalKey", "")), args.optInt("value", 0));
                 case "GET_GLOBAL_INT":
                 case "CAR_GLOBAL_GET":
-                    return new C11CarControlManager(app).getGlobalInt(args.optString("key", args.optString("globalKey", "")), args.optInt("defaultValue", -1));
+                    return C11CarControlManager.getInstance(app).getGlobalInt(args.optString("key", args.optString("globalKey", "")), args.optInt("defaultValue", -1));
                 case "OFFICIAL_BROADCAST":
                 case "CAR_BROADCAST":
-                    return new C11CarControlManager(app).sendOfficialBroadcast(normalized, args.optString("action", args.optString("broadcastAction", "")), args.optJSONObject("extras"));
+                    return C11CarControlManager.getInstance(app).sendOfficialBroadcast(normalized, args.optString("action", args.optString("broadcastAction", "")), args.optJSONObject("extras"));
                 case "SET_C11_MUSIC_VOLUME":
-                    return new C11CarControlManager(app).setMusicVolume(args.optInt("value", args.optInt("volume", 50)));
+                    return C11CarControlManager.getInstance(app).setMusicVolume(args.optInt("value", args.optInt("volume", 50)));
                 case "SET_C11_NAVI_VOLUME":
-                    return new C11CarControlManager(app).setNaviVolume(args.optInt("value", args.optInt("volume", 50)));
+                    return C11CarControlManager.getInstance(app).setNaviVolume(args.optInt("value", args.optInt("volume", 50)));
                 case "SET_C11_CALL_VOLUME":
-                    return new C11CarControlManager(app).setCallVolume(args.optInt("value", args.optInt("volume", 50)));
+                    return C11CarControlManager.getInstance(app).setCallVolume(args.optInt("value", args.optInt("volume", 50)));
                 case "SPEECH_SPEAK_ON":
-                    return new C11CarControlManager(app).setSpeechSpeak(true);
+                    return C11CarControlManager.getInstance(app).setSpeechSpeak(true);
                 case "SPEECH_SPEAK_OFF":
-                    return new C11CarControlManager(app).setSpeechSpeak(false);
+                    return C11CarControlManager.getInstance(app).setSpeechSpeak(false);
                 case "SECONDARY_DISPLAY_ON":
-                    return new C11CarControlManager(app).setSecondaryDisplay(true);
+                    return C11CarControlManager.getInstance(app).setSecondaryDisplay(true);
                 case "SECONDARY_DISPLAY_OFF":
-                    return new C11CarControlManager(app).setSecondaryDisplay(false);
+                    return C11CarControlManager.getInstance(app).setSecondaryDisplay(false);
                 case "XIAOLING_FLOAT_ON":
-                    return new C11CarControlManager(app).setXiaolingFloat(true);
+                    return C11CarControlManager.getInstance(app).setXiaolingFloat(true);
                 case "XIAOLING_FLOAT_OFF":
-                    return new C11CarControlManager(app).setXiaolingFloat(false);
+                    return C11CarControlManager.getInstance(app).setXiaolingFloat(false);
                 case "HVAC_PANEL_ON":
-                    return new C11CarControlManager(app).setHvacPanel(true);
+                    return C11CarControlManager.getInstance(app).setHvacPanel(true);
                 case "HVAC_PANEL_OFF":
-                    return new C11CarControlManager(app).setHvacPanel(false);
+                    return C11CarControlManager.getInstance(app).setHvacPanel(false);
                 case "SET_HVAC_DRIVER_TEMP":
-                    return new C11CarControlManager(app).setHvacDriverTemp(args.optInt("value", args.optInt("temp", 24)));
+                    return C11CarControlManager.getInstance(app).setHvacDriverTemp(args.optInt("value", args.optInt("temp", 24)));
                 case "SET_HVAC_PASSENGER_TEMP":
-                    return new C11CarControlManager(app).setHvacPassengerTemp(args.optInt("value", args.optInt("temp", 24)));
+                    return C11CarControlManager.getInstance(app).setHvacPassengerTemp(args.optInt("value", args.optInt("temp", 24)));
                 case "HVAC_AC_MAX_ON":
-                    return new C11CarControlManager(app).setHvacAcMax(true);
+                    return C11CarControlManager.getInstance(app).setHvacAcMax(true);
                 case "HVAC_AC_MAX_OFF":
-                    return new C11CarControlManager(app).setHvacAcMax(false);
+                    return C11CarControlManager.getInstance(app).setHvacAcMax(false);
                 case "AMBIENT_LIGHT_ON":
-                    return new C11CarControlManager(app).setAmbientLight(true);
+                    return C11CarControlManager.getInstance(app).setAmbientLight(true);
                 case "AMBIENT_LIGHT_OFF":
-                    return new C11CarControlManager(app).setAmbientLight(false);
+                    return C11CarControlManager.getInstance(app).setAmbientLight(false);
                 case "SET_AMBIENT_COLOR":
-                    return new C11CarControlManager(app).setAmbientColor(args.optInt("value", args.optInt("color", 14)));
+                    return C11CarControlManager.getInstance(app).setAmbientColor(args.optInt("value", args.optInt("color", 14)));
                 case "DAY_MODE":
-                    return new C11CarControlManager(app).setDayNightMode(true);
+                    return C11CarControlManager.getInstance(app).setDayNightMode(true);
                 case "NIGHT_MODE":
-                    return new C11CarControlManager(app).setDayNightMode(false);
+                    return C11CarControlManager.getInstance(app).setDayNightMode(false);
                 case "WIFI_ON":
-                    return new C11CarControlManager(app).setWifi(true);
+                    return C11CarControlManager.getInstance(app).setWifi(true);
                 case "WIFI_OFF":
-                    return new C11CarControlManager(app).setWifi(false);
+                    return C11CarControlManager.getInstance(app).setWifi(false);
                 case "BLUETOOTH_ON":
-                    return new C11CarControlManager(app).setBluetooth(true);
+                    return C11CarControlManager.getInstance(app).setBluetooth(true);
                 case "BLUETOOTH_OFF":
-                    return new C11CarControlManager(app).setBluetooth(false);
+                    return C11CarControlManager.getInstance(app).setBluetooth(false);
                 case "LOW_BEAM_ON":
-                    return new C11CarControlManager(app).setLowBeam(true);
+                    return C11CarControlManager.getInstance(app).setLowBeam(true);
                 case "LOW_BEAM_OFF":
-                    return new C11CarControlManager(app).setLowBeam(false);
+                    return C11CarControlManager.getInstance(app).setLowBeam(false);
                 case "REAR_FOG_ON":
-                    return new C11CarControlManager(app).setRearFog(true);
+                    return C11CarControlManager.getInstance(app).setRearFog(true);
                 case "REAR_FOG_OFF":
-                    return new C11CarControlManager(app).setRearFog(false);
+                    return C11CarControlManager.getInstance(app).setRearFog(false);
                 case "POSITION_LIGHT_ON":
-                    return new C11CarControlManager(app).setPositionLight(true);
+                    return C11CarControlManager.getInstance(app).setPositionLight(true);
                 case "POSITION_LIGHT_OFF":
-                    return new C11CarControlManager(app).setPositionLight(false);
+                    return C11CarControlManager.getInstance(app).setPositionLight(false);
                 case "PEDESTRIANS_ALERT_ON":
-                    return new C11CarControlManager(app).setPedestriansAlert(true);
+                    return C11CarControlManager.getInstance(app).setPedestriansAlert(true);
                 case "PEDESTRIANS_ALERT_OFF":
-                    return new C11CarControlManager(app).setPedestriansAlert(false);
+                    return C11CarControlManager.getInstance(app).setPedestriansAlert(false);
                 case "SET_DRIVER_MODE":
-                    return new C11CarControlManager(app).setDriverMode(args.optInt("value", args.optInt("mode", 0)));
+                    return C11CarControlManager.getInstance(app).setDriverMode(args.optInt("value", args.optInt("mode", 0)));
                 case "GUARD_MODE_ON":
-                    return new C11CarControlManager(app).setSceneMode("GUARD_MODE", true);
+                    return C11CarControlManager.getInstance(app).setSceneMode("GUARD_MODE", true);
                 case "GUARD_MODE_OFF":
-                    return new C11CarControlManager(app).setSceneMode("GUARD_MODE", false);
+                    return C11CarControlManager.getInstance(app).setSceneMode("GUARD_MODE", false);
                 case "REST_MODE_ON":
-                    return new C11CarControlManager(app).setSceneMode("REST_MODE", true);
+                    return C11CarControlManager.getInstance(app).setSceneMode("REST_MODE", true);
                 case "REST_MODE_OFF":
-                    return new C11CarControlManager(app).setSceneMode("REST_MODE", false);
+                    return C11CarControlManager.getInstance(app).setSceneMode("REST_MODE", false);
                 case "EXPERIENCE_MODE_ON":
-                    return new C11CarControlManager(app).setSceneMode("EXPERIENCE_MODE", true);
+                    return C11CarControlManager.getInstance(app).setSceneMode("EXPERIENCE_MODE", true);
                 case "EXPERIENCE_MODE_OFF":
-                    return new C11CarControlManager(app).setSceneMode("EXPERIENCE_MODE", false);
+                    return C11CarControlManager.getInstance(app).setSceneMode("EXPERIENCE_MODE", false);
                 case "CAMPING_MODE_ON":
-                    return new C11CarControlManager(app).setSceneMode("CAMPING_MODE", true);
+                    return C11CarControlManager.getInstance(app).setSceneMode("CAMPING_MODE", true);
                 case "CAMPING_MODE_OFF":
-                    return new C11CarControlManager(app).setSceneMode("CAMPING_MODE", false);
+                    return C11CarControlManager.getInstance(app).setSceneMode("CAMPING_MODE", false);
                 case "POWER_SAVE_MODE_ON":
-                    return new C11CarControlManager(app).setSceneMode("POWER_SAVE_MODE", true);
+                    return C11CarControlManager.getInstance(app).setSceneMode("POWER_SAVE_MODE", true);
                 case "POWER_SAVE_MODE_OFF":
-                    return new C11CarControlManager(app).setSceneMode("POWER_SAVE_MODE", false);
+                    return C11CarControlManager.getInstance(app).setSceneMode("POWER_SAVE_MODE", false);
                 case "SENTINEL_MODE_ON":
-                    return new C11CarControlManager(app).setSceneMode("SENTINEL_MODE", true);
+                    return C11CarControlManager.getInstance(app).setSceneMode("SENTINEL_MODE", true);
                 case "SENTINEL_MODE_OFF":
-                    return new C11CarControlManager(app).setSceneMode("SENTINEL_MODE", false);
+                    return C11CarControlManager.getInstance(app).setSceneMode("SENTINEL_MODE", false);
                 case "CAR_CONTROL_ON":
-                    return new C11CarControlManager(app).launchCarControl(true);
+                    return C11CarControlManager.getInstance(app).launchCarControl(true);
                 case "CAR_CONTROL_OFF":
-                    return new C11CarControlManager(app).launchCarControl(false);
+                    return C11CarControlManager.getInstance(app).launchCarControl(false);
                 case "JOURNEY_ENERGY":
-                    return new C11CarControlManager(app).showJourneyEnergy();
+                    return C11CarControlManager.getInstance(app).showJourneyEnergy();
                 case "VEHICLE_HEALTH":
-                    return new C11CarControlManager(app).showVehicleHealth();
+                    return C11CarControlManager.getInstance(app).showVehicleHealth();
                 case "CLICK_AT_POSITION":
                     return click(args.optInt("x", 0), args.optInt("y", 0));
                 case "SWIPE_GESTURE":
@@ -354,17 +354,17 @@ public class ActionExecutor {
     }
 
     private static ActionResult openSettings(Context app, String actionName) {
-        ActionResult officialResult = new C11CarControlManager(app).setSettingsPage(true);
+        ActionResult officialResult = C11CarControlManager.getInstance(app).setSettingsPage(true);
         return officialResult.success ? officialResult : openActivityResult(app, Settings.ACTION_SETTINGS, actionName);
     }
 
     private static ActionResult openMusic(Context app, String actionName, JSONObject args) {
-        ActionResult officialResult = new C11CarControlManager(app).openMedia(args.optJSONObject("extras"));
+        ActionResult officialResult = C11CarControlManager.getInstance(app).openMedia(args.optJSONObject("extras"));
         return officialResult.success ? officialResult : launchKnownPackage(app, actionName, args, "com.leapmotor.music", "com.android.music");
     }
 
     private static ActionResult openNavigation(Context app, String actionName, JSONObject args) {
-        ActionResult officialResult = new C11CarControlManager(app).openAutonavi(args.optJSONObject("extras"));
+        ActionResult officialResult = C11CarControlManager.getInstance(app).openAutonavi(args.optJSONObject("extras"));
         return officialResult.success ? officialResult : launchKnownPackage(app, actionName, args, "com.autonavi.minimap", "com.leapmotor.navigation");
     }
 
@@ -402,7 +402,7 @@ public class ActionExecutor {
     private static ActionResult carCommand(Context app, String action, JSONObject args, boolean enabled) {
         String globalKey = args.optString("globalKey", args.optString("key", ""));
         if (!TextUtils.isEmpty(globalKey)) {
-            return new C11CarControlManager(app).putGlobalInt(globalKey, enabled ? 1 : 0);
+            return C11CarControlManager.getInstance(app).putGlobalInt(globalKey, enabled ? 1 : 0);
         }
 
         String broadcastAction = args.optString("broadcastAction", args.optString("action", ""));
@@ -414,7 +414,7 @@ public class ActionExecutor {
                     extras.put(args.optString("extraName", "enabled"), enabled ? 1 : 0);
                 } catch (Exception ignored) { }
             }
-            return new C11CarControlManager(app).sendOfficialBroadcast(action, broadcastAction, extras);
+            return C11CarControlManager.getInstance(app).sendOfficialBroadcast(action, broadcastAction, extras);
         }
 
         String shellCommand = args.optString("command", "");
