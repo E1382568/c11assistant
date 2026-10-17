@@ -1,5 +1,7 @@
 package com.leapmotor.c11assistant.ui;
 
+import android.widget.Toast;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
