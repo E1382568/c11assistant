@@ -7,4 +7,9 @@
     <color name="c11_text_primary">#F2F6FF</color>
     <color name="c11_text_secondary">#B7C6E0</color>
     <color name="c11_feedback">#263248</color>
+    <!-- 任务页面沿用现有主题强调色，并为浅色背景提供可读的灰色文字。 -->
+    <color name="colorPrimary">@color/c11_accent</color>
+    <color name="grey">#757575</color>
+    <color name="grey_light">#EEEEEE</color>
+    <color name="grey_dark">#424242</color>
 </resources>
